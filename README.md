@@ -2,8 +2,7 @@
 
 Pull Dependencies and Run
 ```cmd
-mvn dependency:resolve
-mvn compile
+mvn  install
 mvn spring-boot:run
 ```
 
@@ -12,35 +11,44 @@ mvn spring-boot:run
 1. Register Drone
 
     ```bash
-    curl --location --request POST 'http://localhost:8080/api/drone' \
+    curl --location --request POST 'http://localhost:8081/api/drone' \
     --header 'Content-Type: application/json' \
     --data-raw '{
-        "serialNumber": "10234321232",
         "model": "LIGHT_WEIGHT",
         "weightLimit": 500,
         "batteryCapacity": 100
     }'
     ```
 
-1. Load Drone with Medication
+2. Load Drone with Medication
     
     ```bash
-    curl --location --request PUT 'http://localhost:8080/api/drone/1' \
+    curl --location --request PUT 'http://localhost:8081/api/drone/1' \
     --header 'Content-Type: application/json' \
     --data-raw '{
-        "name": "Aspirin1",
-        "weight": 400,
-        "code": "ASPIRIN_100X100",
-        "image": "http://imgr.com/100X100"
+        "name": "drone1",
+        "weight": 500,
+      
+        "image": "shorturl.at/fiAEM"
     }'
     ```
 
-1. Available Drones
+3. Available Drones
     ```bash
-    curl --location --request GET 'http://localhost:8080/api/drone/available'
+    curl --location --request GET 'http://localhost:8081/api/drone/available'
     ```
 
-1. Get Drone or Get Drone battery
+4. Get Drone or Get Drone battery
     ```bash
-    curl --location --request GET 'http://localhost:8080/api/drone/1'
+    curl --location --request GET 'http://localhost:8081/api/drone/1'
     ```
+
+5. Swagger UI
+    ```bash
+    curl --location --request GET 'http://localhost:8081/swagger-ui/#/'
+    ```
+   ![](E:\javas\drone-project\screen shots\qwqw.PNG)
+![](E:\javas\drone-project\screen shots\basic-error-controller.PNG)
+![](E:\javas\drone-project\screen shots\drone-controller.PNG)
+![](E:\javas\drone-project\screen shots\Models.PNG)
+![](E:\javas\drone-project\screen shots\DroneDTORes.PNG)
