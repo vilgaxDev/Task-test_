@@ -47,8 +47,4 @@ mvn spring-boot:run
     ```bash
     curl --location --request GET 'http://localhost:8081/swagger-ui/#/'
     ```
-   ![](E:\javas\drone-project\screen shots\qwqw.PNG)
-![](E:\javas\drone-project\screen shots\basic-error-controller.PNG)
-![](E:\javas\drone-project\screen shots\drone-controller.PNG)
-![](E:\javas\drone-project\screen shots\Models.PNG)
-![](E:\javas\drone-project\screen shots\DroneDTORes.PNG)
+  
